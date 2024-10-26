@@ -9,9 +9,10 @@ TODO:
 - [x] Define rest of the operations and tokens within lex
 - [x] Get tokens and stuff made in Yacc
 - [ ] Implement all operations (most done) 
-- [ ] Add specific error checking
+- [ ] Add specific error checking (this will be annoying to add)
 - [ ] Comment code 
 - [ ] Report
+- [ ] More testing (Cases like: 9a, 10000, capitals, etc).
 
 ** files I will be adding to are defined in src. look ever examples first ** 
 

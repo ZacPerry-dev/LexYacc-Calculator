@@ -77,14 +77,14 @@ bitwise_or_expr : bitwise_or_expr '|' add_sub_expr     { $$ = $1 | $3; }
                 | add_sub_expr                         { $$ = $1; }
                 ;
 
-add_sub_expr	:	add_sub_expr '+' factor   { $$ = $1 + $3; }
-              | add_sub_expr '-' factor   { $$ = $1 - $3; }
-	            |	factor                    { $$ = $1; }
-	            ;
+add_sub_expr : add_sub_expr '+' factor   { $$ = $1 + $3; }
+             | add_sub_expr '-' factor   { $$ = $1 - $3; }
+	           | factor                    { $$ = $1; }
+	           ;
 
-factor : '(' add_sub_expr ')'     { $$ = $2; }
-       | NUM              { $$ = $1; }
-       | ID               { $$ = vars[$1]; }
+factor : '(' add_sub_expr ')' { $$ = $2; }
+       | NUM                  { $$ = $1; }
+       | ID                   { $$ = vars[$1]; }
        ;
 %%
 
