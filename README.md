@@ -2,12 +2,18 @@
 Calculator of C integer expressions written in Lex &amp; Yacc
 
 TODO: 
-- [ ] Extend the Makefile? 
-- [ ] Start with unary operations
-- [ ] Figure out what the actual C file is doing, including the header file
+- [x] Extend the Makefile? 
+- [x] Start with unary operations
+- [x] Figure out what the actual C file is doing, including the header file
+- [x] Add support for variable definitions (a-z, lowercase)
+- [x] Define rest of the operations and tokens within lex
+- [x] Get tokens and stuff made in Yacc
+- [ ] Implement all operations (most done) 
+- [ ] Add specific error checking
+- [ ] Comment code 
+- [ ] Report
 
 ** files I will be adding to are defined in src. look ever examples first ** 
-
 
 Goals: 
 - Process expressions until it encounters EOF or invalid syntax

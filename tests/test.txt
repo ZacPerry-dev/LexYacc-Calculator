@@ -1,0 +1,7 @@
+a = 10; 
+b = 2; 
+c = 50; 
+dump; 
+d = a + b; 
+z = d | c;
+dump;
