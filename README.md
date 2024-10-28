@@ -8,7 +8,7 @@ TODO:
 - [x] Add support for variable definitions (a-z, lowercase)
 - [x] Define rest of the operations and tokens within lex
 - [x] Get tokens and stuff made in Yacc
-- [ ] Implement all operations (most done) 
+- [x] Implement all operations (most done) 
 - [ ] Add specific error checking (this will be annoying to add)
 - [ ] Comment code 
 - [ ] Report
@@ -30,4 +30,25 @@ Goals:
 - When an error is detected, print an appropriate message indicating the error
     - Do not perform any assignments in a calculation after encountering an error 
 
+## NOTES for writeup:
+- Integer overflow checking
+  - Since there can be wrap around when adding two numbers together (resulting in unexpected negative beahvior) i had to check each inidividual thing
+- Error checking in general
+  - error, yyerrok, YYERROR, behavior and why I used it   
+  - For error checking overflow and underflow 
+- Approaches to the tokens, etc 
+- Structure of everything, expr, etc. 
+- Different functions
+- How i stored variabels and their values
 
+
+# NOTE: 
+Error checking the overflow and underflow is odd. Basically, in order to handle cases where the value is too large for an int, we must cast it to a long long? first, then pass it to the function. If its greater than the max or less than the min, then it's an overflow. Otherwise, convert to an int and then check the operations???
+
+code works as long as none of the individual values exceeds 2,147,483,647.
+
+ex: 
+```
+a = 1; 
+a += 80000000000000;
+```
