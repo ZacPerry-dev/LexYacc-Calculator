@@ -9,7 +9,7 @@ TODO:
 - [x] Define rest of the operations and tokens within lex
 - [x] Get tokens and stuff made in Yacc
 - [x] Implement all operations (most done) 
-- [ ] Add specific error checking (this will be annoying to add)
+- [x] Add specific error checking (this will be annoying to add)
 - [ ] Comment code 
 - [ ] Report
 - [ ] More testing (Cases like: 9a, 10000, capitals, etc).
@@ -40,7 +40,7 @@ Goals:
 - Structure of everything, expr, etc. 
 - Different functions
 - How i stored variabels and their values
-
+- shifting -> why i made two seperate error checks (the negative y) 
 
 # NOTE: 
 Error checking the overflow and underflow is odd. Basically, in order to handle cases where the value is too large for an int, we must cast it to a long long? first, then pass it to the function. If its greater than the max or less than the min, then it's an overflow. Otherwise, convert to an int and then check the operations???
@@ -52,3 +52,6 @@ ex:
 a = 1; 
 a += 80000000000000;
 ```
+
+
+-- SOLUTION -> just read in values as long longs and check integer bounds before operations. This will ensure that the values are, technically integers, but allows easier overflow detection
