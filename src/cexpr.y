@@ -286,7 +286,7 @@ void yyerror(char *s) {
 }
 
 int main() {
-  // Initialize all vals for all letters to 0.
+  // Initialize all vals for each letter to 0.
   for (int i = 0; i < VALS; i++) {
     vals[i] = 0;
   }
