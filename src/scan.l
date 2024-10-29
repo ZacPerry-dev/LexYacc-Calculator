@@ -2,7 +2,7 @@
 #include "y.tab.h"
 %}
 %%
-[0-9]+    { sscanf(yytext, "%d", &yylval.num);
+[0-9]+    { sscanf(yytext, "%lld", &yylval.num);
             return NUM; }
 [a-z]     { yylval.var = yytext[0] - 'a';
             return ID;  }
