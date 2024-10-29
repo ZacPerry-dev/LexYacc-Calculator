@@ -1,10 +1,16 @@
 %{
+/* COSC: 561 - Compilers & Runtime Systems - Assignment 2: Cexpr 
+ * Zachary Perry
+ * 10/29/24
+ * This Lex file will take the input and parse it into tokens for Yacc to use.
+ * This includes letters, numbers, keywords like clear and dump, and the various supported operations.
+ */
 #include "y.tab.h"
 %}
 %%
 [0-9]+    { sscanf(yytext, "%lld", &yylval.num);
             return NUM; }
-[a-z]     { yylval.var = yytext[0] - 'a';
+[a-z]     { yylval.val = yytext[0] - 'a';
             return ID;  }
 "clear"   { return CLEAR; }
 "dump"    { return DUMP; }
@@ -16,7 +22,7 @@
 "/"       { return '/'; }
 "%"       { return '%'; }
 "+"       { return '+'; }
-"-"       { return '-'; /* negation and subtraction? */ } 
+"-"       { return '-'; } 
 "<<"      { return LSHIFT; }
 ">>"      { return RSHIFT; }
 "&"       { return '&'; }
