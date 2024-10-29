@@ -10,10 +10,10 @@ TODO:
 - [x] Get tokens and stuff made in Yacc
 - [x] Implement all operations (most done) 
 - [x] Add specific error checking (this will be annoying to add)
-- [ ] Comment code 
+- [x] Comment code 
 - [ ] Report
-- [ ] More testing (Cases like: 9a, 10000, capitals, etc).
-- [ ] Update variables
+- [x] More testing (Cases like: 9a, 10000, capitals, etc).
+- [x] Update variables
 ** files I will be adding to are defined in src. look ever examples first ** 
 
 Goals: 
@@ -52,10 +52,7 @@ ex:
 a = 1; 
 a += 80000000000000;
 ```
-
-
 -- SOLUTION -> just read in values as long longs and check integer bounds before operations. This will ensure that the values are, technically integers, but allows easier overflow detection
-
 
 ### Tests: 
 Addition:           +, +=, a = _ + _ overflow
