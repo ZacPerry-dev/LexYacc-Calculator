@@ -13,7 +13,7 @@ TODO:
 - [ ] Comment code 
 - [ ] Report
 - [ ] More testing (Cases like: 9a, 10000, capitals, etc).
-
+- [ ] Update variables
 ** files I will be adding to are defined in src. look ever examples first ** 
 
 Goals: 
@@ -55,3 +55,21 @@ a += 80000000000000;
 
 
 -- SOLUTION -> just read in values as long longs and check integer bounds before operations. This will ensure that the values are, technically integers, but allows easier overflow detection
+
+
+### Tests: 
+Addition:           +, +=, a = _ + _ overflow
+Subtraction:        -, -=, a = _ - _ overflow
+Multiplication:     *, *=, a = _ * _ overflow
+Division:           /, /=, a = _ / _ overflow, divbyzero
+Modulo:             %, %=, a = _ % _ overflow, divbyzero
+Shifting (left):    <<, <<=, a = _ << _ overflow
+Shifting (right):   >>, >>=, a = _ >> _ overflow 
+And:                &, &=, a = _ & _ 
+Or:                 |, |=, a = _ | _
+Xor:                ^, ^=, a = _ ^ _
+Not:                ~
+Negate:             -, overflow
+
+Random (with parenthesis): 
+Random assignment overflows
