@@ -8,4 +8,4 @@ lex.yy.c: scan.l
 	lex scan.l
 
 clean:
-	rm -f y.tab.c y.tab.h lex.yy.c cexpr
+	rm -rf y.tab.c y.tab.h lex.yy.c cexpr cexpr.dSYM
