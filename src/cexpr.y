@@ -65,7 +65,7 @@ int errorCheckOverflow(long long, long long, char *);
 %type <num> bitwise_not_expr
 %type <num> fin
 
-/* All commands below will handle the different expected integer C operations, as well as error check. (more explained in report) */
+/* All commands below will handle the different expected integer C operations, as well as error check. */
 %%
 commands:
 	|	commands command
