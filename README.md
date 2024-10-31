@@ -17,18 +17,18 @@ Goals:
     - Do not perform any assignments in a calculation after encountering an error 
 
 ### Tests: 
-Addition:           +, +=, a = _ + _ overflow
-Subtraction:        -, -=, a = _ - _ overflow
-Multiplication:     *, *=, a = _ * _ overflow
-Division:           /, /=, a = _ / _ overflow, divbyzero
-Modulo:             %, %=, a = _ % _ overflow, divbyzero
-Shifting (left):    <<, <<=, a = _ << _ overflow
-Shifting (right):   >>, >>=, a = _ >> _ overflow 
-And:                &, &=, a = _ & _ 
-Or:                 |, |=, a = _ | _
-Xor:                ^, ^=, a = _ ^ _
-Not:                ~
-Negate:             -, overflow
+- Addition:           +, +=, a = _ + _ overflow
+- Subtraction:        -, -=, a = _ - _ overflow
+- Multiplication:     *, *=, a = _ * _ overflow
+- Division:           /, /=, a = _ / _ overflow, divbyzero
+- Modulo:             %, %=, a = _ % _ overflow, divbyzero
+- Shifting (left):    <<, <<=, a = _ << _ overflow
+- Shifting (right):   >>, >>=, a = _ >> _ overflow 
+- And:                &, &=, a = _ & _ 
+- Or:                 |, |=, a = _ | _
+- Xor:                ^, ^=, a = _ ^ _
+- Not:                ~
+- Negate:             -, overflow
 
-Random (with parenthesis): 
-Random assignment overflows
+- Random (with parenthesis): 
+- Random assignment overflows
